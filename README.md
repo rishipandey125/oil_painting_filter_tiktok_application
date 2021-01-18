@@ -1,11 +1,9 @@
 # Oil Painting Kuwahara Filter - TikTok Interactive Engineer Design Test
 
 ## Introduction
-For the interactive engineer design test, I wanted to created a non-PBR shader that would provide a unique artistic style to a users video. Some of my favorite films like Spiderman Into the Spiderverese employ non-PBR shading techniques, and as TikTok emerges as the new medium for visual storytelling I think it would be really cool if it also allowed users to tell stories in a similar way!
+For the interactive engineer design test, I wanted to created a non-PBR shader that would provide a unique artistic style to a users video. Some of my favorite films employ non-PBR shading techniques, and as TikTok emerges as the new medium for visual storytelling I think it would be really cool if it also allowed users to tell stories in a similar way!
 
 ### Examples
-These video examples are from the company Moment's shot on an iPhone campaign.
-
 Example Video
 ![Example Video #1](/imgs/clip1.gif)
 Example Filtered Video
