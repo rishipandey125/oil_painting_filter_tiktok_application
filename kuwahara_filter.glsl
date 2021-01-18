@@ -1,6 +1,7 @@
+//Kuwahara Water Color Shader
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
-    const int radius = 3;
+    const int radius = 10;
     float sub_grid_size = float(radius*radius);
     int l = radius-1;
     vec2 inv_size = vec2(1.0/iResolution.x,1.0/iResolution.y);
@@ -56,7 +57,6 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         col = mean[i];
       }
     }
-    col = mean[2]
     // Output to screen
     fragColor = vec4(col,1.0);
 }
