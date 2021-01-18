@@ -3,6 +3,20 @@
 ## Introduction
 For the interactive engineer design test, I wanted to created a non-PBR shader that would provide a unique artistic style to a users video. Some of my favorite films like Spiderman Into the Spiderverese employ non-PBR shading techniques, and as TikTok emerges as the new medium for visual storytelling I think it would be really cool if it also allowed users to tell stories in a similar way!
 
+### Examples
+These video examples are from the company Moment's shot on an iPhone campaign.
+
+Example Video
+![Example Video #1](/imgs/clip1.gif)
+Example Filtered Video
+![Example Painted Video #1](/imgs/clip1painted.gif)
+
+Example Video 2
+![Example Video #2](/imgs/clip2.gif)
+
+Example Filtered Video 2
+![Example Painted Video #2](/imgs/clip2painted.gif)
+
 ## Implementation
 To create a real-time oil painting effect I implemented the Kuwahara filter algorithm in GLSL.
 The steps to compute the output for each pixel were:
@@ -14,7 +28,7 @@ If I were deploying this as an actual AR experience I would write a post-process
 
 [ShaderToy Implementation](https://www.shadertoy.com/view/tlGcWW)
 
-## Image Example
+## Brush/Radius Size Example
 Here is a picture of a cute horse I took once when I was on a run.
 ![Horse Portrait](/imgs/horse.png)
 
@@ -25,7 +39,3 @@ We can increase the brush radius to get a more blurred and thick painted look. T
 ![Painted Horse Portrait - Brush Size 20](/imgs/painted20.png)
 
 The larger the brush radius, the slower the frame rate. For real-time shading a brush radius of 6-10 is suggested.
-
-## Video Example 1
-
-## Video Example 2
