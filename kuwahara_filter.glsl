@@ -1,14 +1,15 @@
 //Kuwahara Water Color Shader
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
+    //Radius of Filter for Analyzing Sub-Grids
     const int radius = 10;
     float sub_grid_size = float(radius*radius);
     int l = radius-1;
+    //Inverse Size of Frame and Normalized Pixel Coordinates
     vec2 inv_size = vec2(1.0/iResolution.x,1.0/iResolution.y);
-    // Normalized pixel coordinates (from 0 to 1)
     vec2 uv = fragCoord/iResolution.xy;
 
-    //mean and st.devs
+    //Mean and Variance Array for Sub-Grids
     vec3 mean[4];
     vec3 var[4];
 
@@ -29,6 +30,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         var[1] += pix*pix;
       }
     }
+
     //Bottom Left Sub-Grid
     for (int y = l; y >= 0; y--) {
       for (int x = (-1*l); x <= 0; x++) {
@@ -37,6 +39,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         var[2] += pix*pix;
       }
     }
+
     //Bottom Right Sub-Grid
     for (int y = l; y >= 0; y--) {
       for (int x = l; x >= 0; x--) {
@@ -45,7 +48,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         var[3] += pix*pix;
       }
     }
-    //Selecting Correct Pixel
+
+    //Selecting Correct Pixel Based on Lowest Variance
     float min_var = 1e+4;
     vec3 col = vec3(0.0);
     for (int i = 0; i < 4; i++) {
@@ -57,6 +61,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         col = mean[i];
       }
     }
-    // Output to screen
+
+    // Output Correct Color
     fragColor = vec4(col,1.0);
 }
