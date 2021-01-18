@@ -15,6 +15,16 @@ If I were deploying this as an actual AR experience I would write a post-process
 [ShaderToy Implementation](https://www.shadertoy.com/view/tlGcWW)
 
 ## Image Example
+Here is a picture of a cute horse I took once when I was on a run.
+![Horse Portrait](/imgs/horse.png)
+
+This is the painted result with a brush radius of 8.
+![Painted Horse Portrait - Brush Size 8](/imgs/painted8.png)
+
+We can increase the brush radius to get a more blurred and thick painted look. This result has a brush radius of 20.
+![Painted Horse Portrait - Brush Size 20](/imgs/painted20.png)
+
+The larger the brush radius, the slower the frame rate. For real-time shading a brush radius of 6-10 is suggested.
 
 ## Video Example 1
 
