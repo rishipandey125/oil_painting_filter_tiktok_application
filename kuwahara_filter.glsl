@@ -1,4 +1,4 @@
-//Kuwahara Water Color Shader
+//Kuwahara Painting Shader
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     //Radius of Filter for Analyzing Sub-Grids
